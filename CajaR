@@ -1,0 +1,322 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+struct Pdt
+{
+    char nombre [30];
+    int precio ;
+};
+
+int main ()
+{
+    int menu, select2;
+    char ngto [] ="NGT12";
+    char papas [] ="SBT43";
+    char chl [] ="TD34";
+    char coca [] ="CK43";
+    char pepsi [] ="PPS32";
+    char dor [] ="DRT67";
+    char pb [] ="PNB90";
+    char tds [] ="TDS19";
+    char choco [] ="CHR87";
+    char carga [] ="CGDLG";
+    char chmz [] ="CHMZ2";
+    char corte[]= "CORTE";
+    struct Pdt ngt,sbt,td,ck,pps,dt,pbb,tost,chc,lg,chm;
+    int total = 0;
+    char codigo[100];
+
+
+    strcpy (ngt.nombre,"Negrito");
+    ngt.precio = 10;
+
+    strcpy (sbt.nombre,"Sabritas");
+    sbt.precio = 12;
+
+    strcpy (td.nombre,"Tridents");
+    td.precio = 3;
+
+    strcpy (ck.nombre,"Coca 1 lt");
+    ck.precio = 18;
+
+    strcpy (pps.nombre,"Pepsi 1 lt");
+    pps.precio = 16;
+
+    strcpy (dt.nombre,"Doritos");
+    dt.precio = 11;
+
+    strcpy (pbb.nombre,"Pan Blanco Bimbo");
+    pbb.precio = 24;
+
+    strcpy (tost.nombre,"Tostadas Charras");
+    tost.precio = 22;
+
+    strcpy (chc.nombre,"Chocorroles");
+    chc.precio = 13;
+
+    strcpy (lg.nombre,"Cargador LG");
+    lg.precio = 89;
+
+    strcpy (chm.nombre,"Churrumaiz");
+    chm.precio = 5;
+
+    system("color f5");
+
+    do
+    {
+
+        system("cls");										
+
+        printf("\n\t CAJA REGISTRADORA \n");
+        printf("\t\n Menu de Opciones\n\n\n");
+        printf("\t1. Verificador de precios\n");
+        printf("\t2. Cobrar productos\n");
+        printf("\t3. Corte de caja\n");
+        printf("\t4. Salir\n\n");
+
+        printf("Eliga una opcion: ");
+        scanf ("%d",&menu);
+        switch(menu)
+        {
+
+            do 															
+            {
+            case 1:
+
+
+                system("cls");
+                printf ("\n\t\t VERIFICADOR DE PRODUCTO  \n\n\n");
+                printf ("\tPRESIONE 1 PARA INGRESAR UN CODIGO: \n");
+                printf ("\tPRESIONE 2 PARA REGRESAR AL MENU PRINCIPAL: \n");
+                printf ("\n\tOpcion: ");
+                scanf ("%d", &select2);
+                switch(select2)
+                {
+                case 1:
+
+
+
+                    printf("\n\tIntroduce el codigo del producto: ");
+                    scanf("%s", codigo);
+
+                    if (strcmp(ngto,codigo)==0)
+                    {
+                        printf ("\n\n\tNombre del producto: %s",ngt.nombre);
+                        printf ("\n\tPrecio: $%d\n\n",ngt.precio);
+                    }
+
+                    if (strcmp(papas,codigo)==0)
+                    {
+                        printf ("\n\n\tNombre del producto: %s",sbt.nombre);
+                        printf ("\n\tPrecio: $%d\n\n",sbt.precio);
+
+                    }
+                    if (strcmp(chl,codigo)==0)
+                    {
+                        printf ("\n\n\tNombre del producto: %s",td.nombre);
+                        printf ("\n\tPrecio: $%d\n\n",td.precio);
+
+                    }
+                    if (strcmp(coca,codigo)==0)
+                    {
+                        printf ("\n\n\tNombre del producto: %s",ck.nombre);
+                        printf ("\n\tPrecio: $%d\n\n",ck.precio);
+
+                    }
+                    if (strcmp(pepsi,codigo)==0)
+                    {
+                        printf ("\n\n\tNombre del producto: %s",pps.nombre);
+                        printf ("\n\tPrecio: $%d\n\n",pps.precio);
+                    }
+
+
+                    if (strcmp(dor,codigo)==0)
+                    {
+                        printf ("\n\n\tNombre del producto: %s",dt.nombre);
+                        printf ("\n\tPrecio: $%d\n\n",dt.precio);
+                    }
+
+                    if (strcmp(pb,codigo)==0)
+                    {
+                        printf ("\n\n\tNombre del producto: %s",pbb.nombre);
+                        printf ("\n\tPrecio: $%d\n\n",pbb.precio);
+
+                    }
+                    if (strcmp(tds,codigo)==0)
+                    {
+                        printf ("\n\n\tNombre del producto: %s",tost.nombre);
+                        printf ("\n\tPrecio: $%d\n\n",tost.precio);
+
+                    }
+                    if (strcmp(choco,codigo)==0)
+                    {
+                        printf ("\n\n\tNombre del producto: %s",chc.nombre);
+                        printf ("\n\tPrecio: $%d\n\n",chc.precio);
+
+                    }
+                    if (strcmp(carga,codigo)==0)
+                    {
+                        printf ("\n\n\tNombre del producto: %s",lg.nombre);
+                        printf ("\n\tPrecio: $%d\n\n",lg.precio);
+                    }
+                    if (strcmp(chmz,codigo)==0)
+                    {
+
+                        printf ("\n\n\tNombre del producto: %s",chm.nombre);
+                        printf ("\n\tPrecio: $%d\n\n",chm.precio);
+                    }
+
+
+                    system ("pause");
+
+                case 2:
+
+                    break;
+
+                }
+            }
+            while(select2!=2);
+            break;
+
+            do
+            {
+            case 2:
+
+
+                system("cls");
+                printf ("\n\t\tVENTAS DE PRODUCTOS\n\n\n");
+                printf ("\tPRESIONE 1 PARA INGRESAR CODIGO: \n");
+                printf ("\tPRESIONE 2 PARA REGRESAR AL MENU PRINCIPAL: \n");
+                printf ("\tOpcion: ");
+                scanf ("%d", &select2);
+                switch(select2)
+                {
+                case 1:
+
+                    printf("\n\tIntroduce el codigo del producto: ");
+                    scanf("%s", codigo);
+                    if (strcmp(ngto,codigo)==0)
+                    {
+
+                        printf ("\n\n\tPrecio: $%d\n\n",ngt.precio);
+                        total += ngt.precio;
+
+                    }
+
+                    if (strcmp(papas,codigo)==0)
+                    {
+                        printf ("\n\n\tPrecio: $%d\n\n",sbt.precio);
+                        total += sbt.precio;
+
+                    }
+                    if (strcmp(chl,codigo)==0)
+                    {
+
+                        printf ("\n\n\tPrecio: $%d\n\n",td.precio);
+                        total += td.precio;
+                    }
+                    if (strcmp(coca,codigo)==0)
+                    {
+
+                        printf ("\n\n\tPrecio: $%d\n\n",ck.precio);
+                        total += sbt.precio;
+                    }
+                    if (strcmp(pepsi,codigo)==0)
+                    {
+
+                        printf ("\n\n\tPrecio: $%d\n\n",pps.precio);
+                        total += pps.precio;
+                    }
+
+                    if(strcmp(corte,codigo)==0)
+                    {
+
+                        printf("El total es: %d\n\n",total);
+
+                    }
+
+                    if (strcmp(dor,codigo)==0)
+                    {
+
+                        printf ("\n\n\tPrecio: $%d\n\n",dt.precio);
+                        total += dt.precio;
+                    }
+
+                    if (strcmp(pb,codigo)==0)
+                    {
+                        printf ("\n\n\tPrecio: $%d\n\n",pbb.precio);
+                        total += pbb.precio;
+
+                    }
+                    if (strcmp(tds,codigo)==0)
+                    {
+                        printf ("\n\n\tPrecio: $%d\n\n",tost.precio);
+                        total += tost.precio;
+
+                    }
+                    if (strcmp(choco,codigo)==0)
+                    {
+                        printf ("\n\n\tPrecio: $%d\n\n",chc.precio);
+                        total += chc.precio;
+
+                    }
+                    if (strcmp(carga,codigo)==0)
+                    {
+                        printf ("\n\n\tPrecio: $%d\n\n",lg.precio);
+                        total += lg.precio;
+                    }
+                    if (strcmp(chmz,codigo)==0)
+                    {
+
+                        printf ("\n\n\tPrecio: $%d\n\n",chm.precio);
+                        total += chm.precio;
+                    }
+
+
+                    system ("pause");
+                    break;
+
+
+                case 2:
+
+                    break;
+
+                }
+            }
+            while(select2!=2);
+            break;
+
+
+
+        case 3:
+            printf ("\n \t\t TOTAL DE VENTA: |$%d| \n\n",total);
+            system ("pause");
+            break;
+
+        case 4 :
+            break;
+
+
+            do
+            {
+            default:
+
+                system("cls");
+                printf ("\n\n\n\t\t\tLA OPCION NO ES CORRECTA \n");
+                printf ("\t\tINTENTE CON LAS OPCIONES DADAS EN EL MENU\n\n");
+                printf ("\t\tPRESIONE 2 PARA REGRESAR AL MENU PRINCIPAL: ");
+                scanf ("%d", &select2);
+            }
+            while(select2!=2);												
+            break;
+
+
+
+        }
+    }
+    while(menu!=4);												
+    return 0;
+}
+
+
